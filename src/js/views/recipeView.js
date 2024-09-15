@@ -5,7 +5,21 @@ export class recipeView {
   storage = JSON.parse(localStorage.getItem('mydata'));
   parEl = document.querySelector('.recipe');
 
-  render() {}
+  render() {
+    const preview = document.querySelector('.bookmarks');
+    const html = `<div class="message">
+                    <div>
+                      <svg>
+                        <use href="${icons}#icon-smile"></use>
+                      </svg>
+                    </div>
+                    <p>
+                      No bookmarks yet. Find a nice recipe and bookmark it :)
+                    </p>
+                  </div>`;
+    preview.innerHTML = '';
+    preview.insertAdjacentHTML('afterbegin', html);
+  }
   localstorage() {
     if (this.storage) {
       model.state.bookmarks = this.storage;

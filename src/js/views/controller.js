@@ -9,6 +9,7 @@ import Pagination from './pagination.js';
 
 ///////////////////////////////////////
 async function showRecipe() {
+  recipeView.render();
   // call eventlisteners
   recipeView.localstorage();
   recipeView.events(model.loadRecipe);
