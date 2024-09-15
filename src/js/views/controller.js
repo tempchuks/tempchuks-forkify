@@ -5,8 +5,6 @@ import { pagcontainer, pagination } from './helpers.js';
 import { PAGINATIONUM } from './config.js';
 import Pagination from './pagination.js';
 
-// https://forkify-api.herokuapp.com/v2
-
 ///////////////////////////////////////
 async function showRecipe() {
   recipeView.render();
